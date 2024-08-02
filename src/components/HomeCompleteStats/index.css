@@ -1,0 +1,64 @@
+.homeList {
+  display: flex;
+  justify-content: space-between;
+  width: 82vw;
+  align-items: center;
+  padding: 2px;
+  background-size: cover;
+}
+.stateName {
+  width: 10vw;
+  margin-right: 80px;
+}
+.stateNameLink {
+  color: #ffffff;
+}
+.statsConfirm {
+  width: 10vw;
+  margin-right: 0px;
+  color: #ff073a;
+}
+.statsActive {
+  width: 10vw;
+  color: #007bff;
+}
+.statsRecover {
+  width: 10vw;
+  color: #28a745;
+}
+.statsDead {
+  width: 10vw;
+  color: #6c757d;
+}
+.statsPop {
+  width: 10vw;
+  color: #94a3b8;
+}
+.namesFont {
+  font-family: 'Roboto';
+  font-size: small;
+}
+@media screen and (max-width: 578px) {
+  .homeList {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    background-size: cover;
+    padding-left: 0px;
+    margin-left: 0px;
+  }
+  .stateName {
+    margin-right: 80px;
+    font-size: 10px;
+    margin-left: 0px;
+    padding-left: 0px;
+    width: 100px;
+  }
+  .namesFont {
+    font-family: 'Roboto';
+    font-size: 12px;
+    width: 80px;
+    padding-right: 20px;
+    margin-right: 40px;
+  }
+}

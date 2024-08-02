@@ -1,0 +1,24 @@
+.notFoundDiv {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  background: #161625;
+}
+.notFoundH {
+  color: #cbd5e1;
+}
+.notFoundP {
+  color: #cbd5e1;
+}
+.notFoundBtn {
+  width: 88px;
+  height: 48px;
+  top: 722px;
+  left: 676px;
+  border-radius: 12px;
+  padding: 12px 24px 12px 24px;
+  background: #2563eb;
+  border: 0;
+}

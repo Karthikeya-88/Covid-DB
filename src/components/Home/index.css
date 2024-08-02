@@ -1,0 +1,262 @@
+.loaderBg {
+  background-color: #161625;
+  background-size: cover;
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.ultimateHomeBg {
+  background-color: #161625;
+  background-size: cover;
+  min-height: 100vh;
+  min-width: 100vw;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.homeInputCont {
+  box-shadow: 0px 8px 16px 0px #171f4614;
+  background-color: #2f2f43;
+  width: 824px;
+  height: 72px;
+  color: #94a3b8;
+  border-radius: 20px;
+  display: flex;
+  justify-content: flex-start;
+  padding: 10px;
+  align-items: center;
+  background-size: cover;
+  margin-top: 60px;
+}
+.searchIcon {
+  margin-right: 10px;
+  margin-left: 10px;
+}
+.inputEl {
+  background-color: transparent;
+  color: #94a3b8;
+  border: 0 none #94a3b8;
+  height: 24px;
+}
+.homeNumbers {
+  height: 142px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 60px;
+}
+.numbers {
+  width: 24vw;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 20px;
+}
+.confirmedDiv {
+  color: #ff073a;
+}
+.activeDiv {
+  color: #007bff;
+}
+.recoveredDiv {
+  color: #28a745;
+}
+.deceasedDiv {
+  color: #6c757d;
+}
+.confirmedHead {
+  font-family: Roboto;
+  font-size: 16px;
+  font-weight: 500;
+  line-height: 24px;
+  text-align: left;
+}
+.numberImages {
+  width: 38px;
+  height: 38px;
+  top: 376px;
+  left: 267px;
+}
+.confirmedHeadnumbers {
+  font-family: Roboto;
+  font-size: 24px;
+  font-weight: 500;
+  line-height: 24px;
+  text-align: center;
+}
+.allStatesTable {
+  margin-top: 60px;
+  border: 1px solid #475569;
+  background-color: #1e1e30;
+  border-radius: 12px;
+}
+.tableHead {
+  display: flex;
+  justify-content: space-evenly;
+  width: 90vw;
+}
+.stateNameHead {
+  color: #ffffff;
+}
+.stateNameHeadDiv {
+  color: #ffffff;
+  display: flex;
+  align-items: center;
+}
+.ascdescBtn {
+  border: 0;
+  color: #94a3b8;
+  background-color: transparent;
+}
+.homeOrderIcon {
+  color: #94a3b8;
+  margin-top: 8px;
+}
+.remainingHeadins {
+  color: #ffffff;
+}
+.homeHLC {
+  border-radius: 20px;
+  width: 1146px;
+  height: 0px;
+  top: 448px;
+  left: 150px;
+  border: 1px 0px 0px 0px;
+  color: #475569;
+}
+.homeUlList {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  width: 90vw;
+  align-items: center;
+  background-size: cover;
+}
+.searchStateUL {
+  display: flex;
+  flex-direction: column;
+}
+@media screen and (max-width: 578px) {
+  .ultimateHomeBg {
+    background-color: #161625;
+    background-size: cover;
+    min-height: 100vh;
+    width: 100vw;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  .homeNumbers {
+    display: flex;
+    flex-wrap: wrap;
+  }
+  .numbers {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    flex-wrap: wrap;
+    width: 24vw;
+    padding-right: 10px;
+    padding-left: 0px;
+  }
+  .confirmedHead {
+    font-family: Roboto;
+    font-size: 10px;
+    font-weight: 200;
+    line-height: 10px;
+    text-align: left;
+  }
+  .numberImages {
+    width: 20px;
+    height: 20px;
+    top: 208px;
+    left: 86px;
+  }
+  .confirmedHeadnumbers {
+    font-family: Roboto;
+    font-size: 16px;
+    font-weight: 300;
+    line-height: 16px;
+    text-align: center;
+  }
+  .homeInputCont {
+    width: 312px;
+    height: 48px;
+    top: 80px;
+    left: 24px;
+  }
+  .allStatesTable {
+    margin-top: 60px;
+    margin-left: 0px;
+    padding-left: 160px;
+    border: 1px solid #475569;
+    background-color: #1e1e30;
+    border-radius: 12px;
+    width: 160vw;
+    overflow-x: scroll;
+    margin-right: 20px;
+  }
+  .tableHead {
+    display: flex;
+    padding-right: 20px;
+  }
+  .stateNameHead {
+    color: #ffffff;
+    font-size: 16px;
+    margin-left: 20px;
+  }
+  .stateNameHeadDiv {
+    color: #ffffff;
+    display: flex;
+    align-items: center;
+    margin-right: 20px;
+  }
+  .ascdescBtn {
+    border: 0;
+    color: #94a3b8;
+    background-color: transparent;
+  }
+  .homeOrderIcon {
+    color: #94a3b8;
+    margin-top: 8px;
+    width: 10px;
+    height: 10px;
+    margin-right: 0px;
+  }
+  .remainingHeadins {
+    color: #ffffff;
+    font-size: 16px;
+    margin-right: 20px;
+  }
+  .homeHLC {
+    width: 839px;
+    height: 0px;
+    top: 536px;
+    left: 24px;
+    border: 1px 0px 0px 0px;
+    color: #475569;
+  }
+  .homeUlList {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    padding-left: 0px;
+    align-items: center;
+    background-size: cover;
+    margin-left: 0px;
+  }
+  .searchStateUL {
+    display: flex;
+    align-items: center;
+    overflow-x: visible;
+    width: 90vw;
+    background-size: cover;
+    flex-direction: column;
+    padding-left: 0px;
+    margin-left: 0px;
+  }
+}
