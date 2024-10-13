@@ -1,10 +1,10 @@
 import './index.css'
 
 const FaqItem = props => {
-  const {faqDetails} = props
-  const {question, answer} = faqDetails
+  const {faqData} = props
+  const {answer, question} = faqData
   return (
-    <li className="question-details" key={faqDetails.id}>
+    <li className="faq-item-card">
       <p className="question">{question}</p>
       <p className="answer">{answer}</p>
     </li>

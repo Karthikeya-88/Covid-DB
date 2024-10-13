@@ -1,58 +1,42 @@
-.aboutBg {
-  background: #161625;
+.about-route-container {
   display: flex;
   flex-direction: column;
-  justify-content: flex-start;
-  background-size: cover;
-  padding-left: 80px;
-  padding-top: 40px;
-  padding-right: 80px;
-  padding-bottom: 40px;
+  min-height: 100vh;
+  background-color: #161625;
+  padding-left: 60px;
+  padding-top: 90px;
+  padding-right: 20px;
+  padding-bottom: 20px;
 }
-.aboutAb {
-  color: #f8fafc;
-  font-family: Roboto;
-  font-size: 48px;
+@media screen and (max-width: 768px) {
+  .about-route-container {
+    padding: 20px;
+    padding-top: 60px;
+  }
+}
+.about-description {
   font-weight: 500;
-  line-height: 64px;
-  text-align: left;
-}
-.lastUpdate {
-  color: #94a3b8;
-  font-family: Roboto;
   font-size: 18px;
-  font-weight: 400;
-  line-height: 24px;
-  text-align: left;
-}
-.covid19Head {
   color: #e2e8f0;
-  font-family: Roboto;
-  font-size: 24px;
-  font-weight: 500;
-  line-height: 36px;
-  text-align: left;
 }
-.aboutUl {
-  padding: 0px;
-  margin: 0px;
+@media screen and (max-width: 768px) {
+  .about-description {
+    font-size: 14px;
+  }
 }
-.faqQuestion {
-  font-family: Roboto;
-  font-size: 16px;
-  font-weight: 500;
-  line-height: 32px;
-  text-align: left;
+.last-update {
+  font-size: 14px;
   color: #94a3b8;
 }
-.faqAnswer {
-  font-family: Roboto;
-  font-size: 16px;
+
+.about-heading {
   font-weight: 500;
-  line-height: 32px;
-  text-align: left;
-  color: #007bff;
+  font-size: 30px;
+  color: #f8fafc;
 }
-.aboutList {
-  color: #ffffff;
+
+.faq-list {
+  display: flex;
+  flex-direction: column;
+  padding-left: 0px;
 }

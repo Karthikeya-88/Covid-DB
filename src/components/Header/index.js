@@ -1,84 +1,163 @@
-import {useState} from 'react'
-import {Link, withRouter} from 'react-router-dom'
+/* eslint-disable react/no-unknown-property */
+import {Component} from 'react'
+import {Link} from 'react-router-dom'
 import './index.css'
 
-const Header = () => {
-  const [smallNavbar, setNavbar] = useState(false)
-
-  const handleSmallNavbar = () => {
-    setNavbar(true)
+class Header extends Component {
+  state = {
+    displaySmNavItems: false,
+    activeHomeNav: true,
+    activeAboutNav: false,
+    activeVaccinationNav: false,
   }
 
-  const closeMenu = () => {
-    setNavbar(false)
+  onClickNavBarIcon = () => {
+    this.setState(prevState => ({
+      displaySmNavItems: !prevState.displaySmNavItems,
+    }))
   }
 
-  return (
-    <nav className="headerNav">
-      <div className="headerImg">
-        <Link to="/">
-          <span className="covidNameheader">
-            COVID19<span className="covidNameSpan">INDIA</span>
-          </span>
-        </Link>
-        <ul className="headerHomeAbout">
-          <li>
-            <Link to="/" className="navLink">
-              Home
-            </Link>
-          </li>
-          <li>
-            <Link to="/about" className="navLink">
-              About
-            </Link>
-          </li>
-        </ul>
-      </div>
-      <div>
-        <div className="smallDevices">
-          <Link to="/">
-            <h1 className="covidNameheader">
-              COVID19<span className="covidNameSpan">INDIA</span>
+  onClickCloseNav = () => {
+    this.setState(prevState => ({
+      displaySmNavItems: !prevState.displaySmNavItems,
+    }))
+  }
+
+  activeHomeNav = () => {
+    this.setState({
+      activeHomeNav: true,
+      activeAboutNav: false,
+      activeVaccinationNav: false,
+    })
+  }
+
+  activeAboutNav = () => {
+    this.setState({
+      activeHomeNav: false,
+      activeAboutNav: true,
+      activeVaccinationNav: false,
+    })
+  }
+
+  activeVaccinationNav = () => {
+    this.setState({
+      activeHomeNav: false,
+      activeAboutNav: false,
+      activeVaccinationNav: true,
+    })
+  }
+
+  render() {
+    const {
+      displaySmNavItems,
+      activeHomeNav,
+      activeAboutNav,
+      activeVaccinationNav,
+    } = this.state
+    const activeHomeClass = activeHomeNav === true ? 'active-tab-class' : ''
+    const activeAboutClass = activeAboutNav === true ? 'active-tab-class' : ''
+    const activeVaccinationClass =
+      activeVaccinationNav === true ? 'active-tab-class' : ''
+
+    return (
+      <div className="header-container">
+        <div className="nav-bar-sm-container">
+          <Link to="/" className="nav-item-link">
+            <h1 className="logo-heading">
+              COVID19<span className="india">INDIA</span>
             </h1>
           </Link>
           <button
             type="button"
-            onClick={handleSmallNavbar}
-            className="menuButton"
+            onClick={this.onClickNavBarIcon}
+            className="navigation-btn"
           >
             <img
-              src="https://res.cloudinary.com/dnmyyqfhs/image/upload/v1719242136/add-to-queue_1_1_wiawby.png"
-              alt="menu-button"
+              src="https://res.cloudinary.com/dnv6kesmt/image/upload/v1636521129/mini-project/nav-bar-icon-sm_uee2un.png"
+              alt="nav-bar-icon"
+              className="nav-bar-icon"
             />
           </button>
         </div>
-        {smallNavbar ? (
-          <>
-            <ul className="smallDevices smallUl">
-              <li>
-                <Link to="/" className="navLink">
+        {displaySmNavItems && (
+          <div className="nav-sm-controls">
+            <ul className="sm-controls">
+              <Link to="/" className="nav-item-link">
+                <li
+                  className={`nav-item-home ${activeHomeClass}`}
+                  onClick={this.activeHomeNav}
+                >
                   Home
-                </Link>
-              </li>
-              <li>
-                <Link to="/about" className="navLink">
+                </li>
+              </Link>
+              <Link to="/about" className="nav-item-link">
+                <li
+                  onClick={this.activeAboutNav}
+                  className={`nav-item ${activeAboutClass}`}
+                >
                   About
-                </Link>
-              </li>
-              <li>
-                <button onClick={closeMenu} type="button" className="closeMenu">
-                  <img
-                    src="https://res.cloudinary.com/dnmyyqfhs/image/upload/v1719242460/Solid_iotdji.png"
-                    alt="close icon"
-                  />
-                </button>
-              </li>
+                </li>
+              </Link>
+              <Link to="/vaccination" className="nav-item-link">
+                <li
+                  onClick={this.activeVaccinationNav}
+                  className={`nav-item ${activeVaccinationClass}`}
+                >
+                  Vaccination
+                </li>
+              </Link>
             </ul>
-          </>
-        ) : null}
-      </div>
-    </nav>
-  )
-}
+            <button
+              testid="close-nav-btn"
+              className="close-nav-btn"
+              type="button"
+              onClick={this.onClickCloseNav}
+            >
+              <img
+                src="https://res.cloudinary.com/dnv6kesmt/image/upload/w_1000,c_fill,ar_1:1,g_auto,r_max,bo_5px_solid_red,b_rgb:262c35/v1636521128/mini-project/cross-icon_jezz2z.png"
+                alt="close nav btn"
+                className="close-nav-btn"
+              />
+            </button>
+          </div>
+        )}
+        <div className="nav-bar-large-container">
+          <Link to="/" className="nav-item-link">
+            <h1 className="logo-heading">
+              COVID19<span className="india">INDIA</span>
+            </h1>
+          </Link>
+          <ul className="nav-controls">
+            <Link to="/" className="nav-item-link">
+              <li
+                className={`nav-item ${activeHomeClass}`}
+                onClick={this.activeHomeNav}
+              >
+                Home
+              </li>
+            </Link>
 
-export default withRouter(Header)
+            <Link to="/about" className="nav-item-link">
+              <li
+                className={`nav-item ${activeAboutClass}`}
+                onClick={this.activeAboutNav}
+              >
+                About
+              </li>
+            </Link>
+
+            <Link to="/vaccination" className="nav-item-link">
+              <li
+                className={`nav-item ${activeVaccinationClass}`}
+                onClick={this.activeVaccinationNav}
+              >
+                Vaccination
+              </li>
+            </Link>
+          </ul>
+        </div>
+      </div>
+    )
+  }
+}
+export default Header
